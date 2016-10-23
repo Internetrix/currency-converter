@@ -1,0 +1,375 @@
+---
+Name: currency-converter
+After: 'framework/*','cms/*'
+---
+
+ContentController:
+  extensions:
+    - CurrencyConversionControllerExtension
+
+Injector:
+  Currency: 
+    class: ConvertibleCurrency
+
+ConvertibleCurrency:
+  latest_currency_rates_api : 'http://api.fixer.io/latest'
+  base_currency: 'AUD'
+  other_currencies:
+    - BGN #Bulgaria
+    - BRL #Brazil
+    - CAD #Canadia
+    - CHF #Switzerland
+    - CNY #China
+    - CZK #Czech
+    - DKK #Danish
+    - EUR #Euro
+    - GBP #Britain
+    - HKD #Hong Kong
+    - HRK #Croatia
+    - HUF #Hungary
+    - IDR #Indonesia
+    - ILS #Israeli
+    - INR #India
+    - JPY #Japan
+    - KRW #South Korea
+    - MXN #Mexico
+    - MYR #Malaysia
+    - NOK #Norway
+    - NZD #New Zealand
+    - PHP #Philippines
+    - PLN #Poland
+    - RON #Romania
+    - RUB #Russia
+    - SEK #Sweden
+    - SGD #Singapore
+    - THB #Thailand
+    - TRY #Turkey
+    - USD #USA
+    - ZAR #South Africa
+  currencies_info:
+    AUD:
+      symbol : '$'
+      title : 'Australian Dollar'
+      locales:
+        - en_AU
+        - en
+      country:
+        - AU
+    BGN:
+      symbol : 'лв'
+      title : 'Bulgarian Lev'
+      locales:
+        - bg_BG
+        - bg
+      country:
+        - BG
+    BRL:
+      symbol : 'R$'
+      title : 'Brazilian Real'
+      locales:
+        - pt_BR
+        - pt
+      country:
+        - BR
+    CAD:
+      symbol : '$'
+      title : 'Canadian Dollar'
+      locales:
+        - en_CA
+        - en
+      country: 
+        - CA
+    CHF:
+      symbol : 'CHF'
+      title : 'Swiss Franc'
+      locales:
+        - gsw_CH
+        - it_CH
+        - rm_CH
+        - de_CH
+        - fr_CH
+      country: 
+        - CH
+    CNY :
+      symbol : '¥'
+      title : 'Chinese Yuan'
+      locales:
+        - zh_CN
+        - cn
+      country:
+        - CN
+      aliases : 
+        - 'RMB'
+    CZK:
+      symbol : 'Kč'
+      title : 'Czech Koruna'
+      locales:
+        - cs_CZ
+        - cs
+      country: 
+        - CZ
+    DKK:
+      symbol : 'kr'
+      title : 'Danish Krone'
+      locales:
+        - da_DK
+        - da
+      country: 
+        - DK
+    GBP :
+      symbol : '£'
+      title : 'British Pound'
+      locales:
+        - en_GB
+        - en
+      country: 
+        - GB
+    HKD :
+      symbol : '$'
+      title : 'Hong Kong Dollar'
+      locales:
+        - zh_HK
+        - cn
+      country:
+        - HK
+    HRK :
+      symbol : 'kn'
+      title : 'Croatian Kuna'
+      locales:
+        - hr_HR
+        - hr
+      country:
+        - HR
+    HUF :
+      symbol : 'Ft'
+      title : 'Hungarian Forint'
+      locales:
+        - hu_HU
+        - hu
+      country:
+        - HU
+    IDR :
+      symbol : 'Rp'
+      title : 'Indonesian Rupiah'
+      locales:
+        - id_ID
+        - id
+      country:
+        - ID
+    ILS :
+      symbol : '₪'
+      title : 'Israeli New Sheqel'
+      locales:
+        - he_IL
+        - he
+      country:
+        - IL
+    IDR :
+      symbol : '₹'
+      title : 'Indian Rupee'
+      locales:
+        - hi_IN
+        - kn_IN
+        - ml_IN
+        - ne_IN
+        - or_IN
+        - ta_IN
+        - ur_IN
+        - as_IN
+        - bn_IN
+        - en_IN
+        - gu_IN
+        - hi
+      country: 
+        - IN
+    JPY :
+      symbol : '￥'
+      title : 'Japanese Yen'
+      locales:
+        - ja_JP
+        - ja
+      country: 
+        - JP
+    KRW :
+      symbol : '₩'
+      title : 'South Korean Won'
+      locales:
+        - ko_KR
+        - ko
+      country: 
+        - KR
+    MXN :
+      symbol : '$'
+      title : 'Mexican Peso'
+      locales:
+        - es_MX
+        - es
+      country: 
+        - MX
+    MYR :
+      symbol : 'RM'
+      title : 'Malaysian Ringgit'
+      locales:
+        - ms_MY
+        - ms
+      country: 
+        - MY
+    NOK :
+      symbol : 'kr'
+      title : 'Norwegian Krone'
+      locales:
+        - nn_NO
+        - nn
+      country: 
+        - NO  
+    NZD :
+      symbol : '$'
+      title : 'New Zealand Dollar'
+      locales:
+        - en_NZ
+        - en
+      country: 
+        - NZ
+    PHP :
+      symbol : '₱'
+      title : 'Philippine Peso'
+      locales:
+        - fil_PH
+        - fil
+        - en_PH
+      country: 
+        - PH
+    PLN :
+      symbol : 'zł'
+      title : 'Polish Zloty'
+      locales:
+        - pl_PL
+        - pl
+      country: 
+        - PL
+    RON :
+      symbol : 'RON'
+      title : 'Romanian Leu'
+      locales:
+        - ro_RO
+        - ro
+      country: 
+        - RO
+    RUB :
+      symbol : 'руб'
+      title : 'Russian Ruble'
+      locales:
+        - ru_RU
+        - ru
+      country: 
+        - RU
+    SEK :
+      symbol : 'kr'
+      title : 'Swedish Krona'
+      locales:
+        - sv_SE
+        - sv
+      country: 
+        - SE
+    SGD :
+      symbol : '$'
+      title : 'Singapore Dollar'
+      locales:
+        - en_SG
+        - en
+      country: 
+        - SG
+    THB :
+      symbol : '฿'
+      title : 'Thai Baht'
+      locales:
+        - th_TH
+        - th
+      country: 
+        - TH
+    TRY :
+      symbol : '฿'
+      title : 'Turkish Lira'
+      locales:
+        - tr_TR
+        - tr
+      country: 
+        - TR
+    USD :
+      symbol : '$'
+      title : 'US Dollar'
+      locales:
+        - en_US
+        - en
+      country: 
+        - US
+    ZAR :
+      symbol : 'R'
+      title : 'South African Rand'
+      locales:
+        - en_ZA
+        - en
+        - zu_ZA
+      country: 
+        - ZA
+    EUR :
+      symbol : '€'
+      title : 'Euro'
+      locales:
+        - de_AT   #Austria
+        - de_BE   #Belgium
+        - el_CY   #Cyprus
+        - el
+        - et_EE   #Estonia
+        - et
+        - sv_FI   #Finland
+        - sv
+        - fr_FR   #France
+        - fr
+        - de_DE   #Germany
+        - de
+        - el_GR   #Greece
+        - el
+        - en_IE   #Ireland
+        - it_IT
+        - it
+        - lv_LV   #Latvia
+        - lv
+        - lt_LT   #Lithuania
+        - lt
+        - de_LU   #Luxembourg
+        - fr_LU   #Luxembourg
+        - mt_MT   #Malta
+        - mt
+        - en_MT   #Malta
+        - en
+        - nl_NL   #Netherlands
+        - nl
+        - pt_PT   #Portugal
+        - pt
+        - sk_SK   #Slovakia
+        - sk
+        - sl_SI   #Slovenia
+        - sl
+        - es_ES   #Spain
+        - es
+      country:
+        - AT
+        - BE
+        - CY
+        - EE
+        - FI
+        - FR
+        - DE
+        - GR
+        - IE
+        - IT
+        - LV
+        - LT
+        - LU
+        - MT
+        - NL
+        - PL
+        - SK
+        - SI
+        - ES
