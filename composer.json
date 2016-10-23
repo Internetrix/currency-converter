@@ -1,5 +1,5 @@
 {
-	"name": "Internetrix/currency-converter",
+	"name": "internetrix/currency-converter",
 	"description": "Retrieve, store and apply currency conversions in your SilverStripe site.",
 	"keywords": [
 		"silverstripe",
