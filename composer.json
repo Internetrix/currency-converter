@@ -17,11 +17,11 @@
 		}
 	],
 	"support" : {
-        "issues" : "https://github.com/Internetrix/currency-converter/issues"
-    },
-    "extra" : {
-        "installer-name" : "currency-converter"
-    }
+        	"issues" : "https://github.com/Internetrix/currency-converter/issues"
+	},
+	"extra" : {
+		"installer-name" : "currency-converter"
+	},
 	"minimum-stability": "dev",
 	"prefer-stable": true
 }
