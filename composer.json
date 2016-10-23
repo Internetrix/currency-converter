@@ -1,0 +1,27 @@
+{
+	"name": "Internetrix/currency-converter",
+	"description": "Retrieve, store and apply currency conversions in your SilverStripe site.",
+	"keywords": [
+		"silverstripe",
+		"currency"
+	],
+	"type": "silverstripe-module",
+	"require": {
+		"silverstripe/framework" : "~3.1",
+	},
+	"license": "BSD-2-Clause",
+	"authors": [
+		{
+			"name": "Internetrix",
+			"email": "support@internetrix.com.au"
+		}
+	],
+	"support" : {
+        "issues" : "https://github.com/Internetrix/currency-converter/issues"
+    },
+    "extra" : {
+        "installer-name" : "currency-converter"
+    }
+	"minimum-stability": "dev",
+	"prefer-stable": true
+}
