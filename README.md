@@ -12,8 +12,11 @@ If the amount is not in the base currency, include the amount's currency.
 If it requires conversion to a specific currency, include that target currency.
 `ConvertibleCurrency::convert($amount, $amountCurrency, $targetCurrency)`
 
-To switch the display rate, add the target currency to the URL using a "uscc" variable. For example, to show aussie dollars:
-`http://somewhere.com?uscc=AUD` 
+From inside a template, simply add "AutoConversion" to the output variable. To get the currency symbol, append "Full". AutoConversion can also accept two parameters: base and target currency.
+`<h2>Total Price: $Total.AutoConversion.Full</h2>`
+
+To switch the display rate, add the target currency to the URL using a "uscc" variable (it then persists for the session.) For example, to show aussie dollars:
+`http://somewhere.com/mypage/?uscc=AUD` 
 
 ## Refreshing the rates
 To get the latest currency conversion rates, run the included task with a daily cron. It populates the database with conversions between all configured cuurencies.
