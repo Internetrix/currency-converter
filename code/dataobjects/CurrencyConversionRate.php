@@ -116,8 +116,9 @@ class CurrencyConversionRate extends DataObject {
 		$request = Controller::curr()->request;
 		$httpVar = self::config()->http_get_var;
 		
-		if($request->getVar($httpVar)){
-			CurrencyConversionRate::setCurrencyCode($request->getVar($httpVar));
+		if( $code = $request->getVar($httpVar) ){
+			if( in_array($code, self::all_currencies()) )
+				CurrencyConversionRate::setCurrencyCode($code);
 		}
 	}
 	
